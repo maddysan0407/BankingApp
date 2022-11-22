@@ -1,0 +1,12 @@
+<!ELEMENT THEbank (cheque*)>
+<!ELEMENT payment_info (fname,lname,phone_number,email_address,ad_1,street,city,state,p_code)+>
+<!ATTLIST payment_info Account_no CDATA #REQUIRED>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT phone_number (#PCDATA)>
+<!ELEMENT email_address (#PCDATA)>
+<!ELEMENT ad_1 (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT p_code(#PCDATA)>

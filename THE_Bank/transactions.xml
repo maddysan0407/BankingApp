@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE THEbank SYSTEM "./cheque.dtd">
+<THEbank>
+    <transactions Account_no="129e128ng">
+        <fname>Soorya</fname>
+        <lname>S</lname>
+        <phone_number>9813276412</phone_number>
+        <email_address>soorya.s@gmail.com</email_address>
+        <ad_1>75-b,ground floor</ad_1>
+	<street>louis lane</street>
+	<city>Kochi</city>
+	<state>Kerala</state>
+	<p_code>123456</p_code>
+ 	<acc_no>928937</acc_no>
+	<amount>5000</amount>
+	
+
+    </transactions>
+</THEbank>

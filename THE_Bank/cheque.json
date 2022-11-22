@@ -1,0 +1,16 @@
+{
+  "THEbank": {
+    "#text": "-",
+    "cheque": {
+      "fname": "Soorya",
+      "lname": "S",
+      "phone_number": 9813276412,
+      "email_address": "soorya.s@gmail.com",
+      "ad_1": "75-b,ground floor",
+      "street": "louis lane",
+      "city": "Kochi",
+      "state": "Kerala",
+      "p_code": 123456
+    }
+  }
+}
