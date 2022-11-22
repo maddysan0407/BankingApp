@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .center-tag {
+        padding-left: 50px;
+        padding-top: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      h1{
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-bottom: 20px;
+      }
+      .card{
+        font-size: 14px;
+        width: 70%;
+        padding: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        font-weight: 100;
+        color: rgb(145, 145, 145);
+      }
+    </style>
+  </head>
+  <body ng-app="mainApp">
+    <div ng-controller="dataController">
+        <div class="bar">
+            <div class="top">
+                <div>Contact Us +91 9689765400 / 01 | THEbank@gmail.com</div>
+            </div>
+            <div class="nav_bar">
+                <a href="#" class="navbar-brand">
+                    <img src="./img/logo2.jpg" class="responsive-img" style="position: fluid;">
+                </a>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="nav-items-main nav_bar">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="newcheque.html" class="nav-item nav-link">cheque</a>
+                    <a href="nextpg1.html" class="nav-item nav-link">Transactions</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact us</a>
+                    <a href="about.html" class="nav-item nav-link " >About us</a>
+                    <a href="user_data.html" class="nav-item nav-link " >Cheque Data</a>
+                    <a href="contact_data.html" class="nav-item nav-link-active">Contact Data</a>
+                </div>
+                <!-- <button id="hamburger"><i class="fa fa-bars"></i></button> -->
+                <p></p>
+            </div>
+        </div>
+        <h1>
+            Queries and Contact Data
+        </h1>
+      <div class="center-tag" ng-repeat="values in data">
+        <div class="card">
+            <h2>Name: {{values.fname + " " + values.lname}}</h2>
+            <h2>Query: {{values.query}}</h2>
+            <h3>Email: {{values.email}}</h3>
+            <h3>Mobile: {{values.mob}}</h3>
+            <h3>Account Number: {{values.account_number}}</h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = angular.module("mainApp", []);
+      app.controller("dataController", function ($scope, $interval, $http) {
+        $scope.data = [];
+
+        var dataCall = function () {
+          $http.get("http://localhost:3000/contact_data").then(function (data) {
+            console.log(data.data);
+            $scope.data = data.data;
+          });
+        };
+
+        $interval(dataCall, 1000);
+      });
+    </script>
+  </body>
+</html>

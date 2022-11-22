@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cheque</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <script>
+        let isBarOpened = false
+        function controlNavbar() {
+            if (isBarOpened) {
+
+            }
+            else {
+
+            }
+            isBarOpened = !isBarOpened;
+        }
+    </script>
+
+    <div class="bar">
+        <div class="top">
+            <div>Contact Us +91 9689765400 / 01 | THEbank@gmail.com</div>
+        </div>
+        <div class="nav_bar">
+            <a href="#" class="navbar-brand">
+                <img src="./img/logo2.jpg" class="responsive-img" style="position: fluid;">
+            </a>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class="nav-items-main nav_bar">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="newcheque.html" class="nav-item nav-link">cheque</a>
+                <a href="nextpg1.html" class="nav-item nav-link-active">Transactions</a>
+                <a href="contact.html" class="nav-item nav-link">Contact us</a>
+                <a href="about.html" class="nav-item nav-link " tabindex="-1">About us</a>
+                <a href="user_data.html" class="nav-item nav-link " tabindex="-1">Cheque Data</a>
+                <a href="contact_data.html" class="nav-item nav-link " tabindex="-1">Contact Data</a>
+
+            </div>
+            <!-- <button id="hamburger"><i class="fa fa-bars"></i></button> -->
+            <p></p>
+        </div>
+        <!-- <div class="nav-bar-responsive">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="newcheque.html" class="nav-item nav-link-active">cheque</a>
+            <a href="#" class="nav-item nav-link">Profile</a>
+            <a href="#" class="nav-item nav-link">Messages</a>
+            <a href="#" class="nav-item nav-link " tabindex="-1">Reports</a>
+        </div> -->
+    </div>
+
+
+    <!-- navbar end  -->
+
+    <!-- content start -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div id="bottomleft">
+                <h1 class="display-4">The Bank</h1>
+                <h2>We Invest in your Future!</h2>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- form start -->
+
+
+    <div class="container">
+        <div>
+            <h2 style="text-align: center;">Transactions</h2> <br><br>
+        </div>
+        <div class="form ">
+
+            <!-- <h2><center>Payers name</center></h2>
+
+        <div class="form-row">
+            <div class="col">
+                <label>First Name :</label>
+		        <input type="text" class="text" name="fname">
+		
+
+            </div>
+            <div class="col">
+                <label>Last Name :</label>     
+
+
+		        <input type="text" class="text" name="lname">
+
+            </div>
+            
+
+        </div>
+        <br><br>
+
+        <div class="form-row">
+            <div class="col-sm-6 " >
+                <label>Mobile Number:</label>
+		    <input type="number" class="text" name="Number">
+            </div>
+            
+        </div> -->
+
+            <h2>
+                <center>Transaction type</center>
+            </h2>
+			<center><label class="form-control-label px-3">deposit</label>
+				<input type="radio" id="t_type_D"name="t">
+				<label class="form-control-label px-3">withdraw</label>
+				<input type="radio" id="t_type_W"name="t"></center>
+
+			
+            <div class="container-fluid px-1 py-5 mx-auto">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+
+                        <p class="blue-text">Just answer a few questions<br></p>
+                        <div class="card">
+                            <br>
+                            <h5 class="text-center mb-4">Payer's Details</h5>
+                            <form class="form-card" onsubmit="event.preventDefault()" action="/payer_deet" method="post">
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">First name<span class="text-danger">
+                                                *</span></label> <input type="text" id="fname" name="fname"
+                                            placeholder="Enter your first name" onblur="validate(1)"> </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Last name<span class="text-danger">
+                                                *</span></label> <input type="text" id="lname" name="lname"
+                                            placeholder="Enter your last name" onblur="validate(2)"> </div>
+                                </div>
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Email<span class="text-danger">
+                                                *</span></label> <input type="text" id="email" name="email"
+                                            placeholder="" onblur="validate(3)"> </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Phone number<span class="text-danger">
+                                                *</span></label> <input type="text" id="mob" name="mob" placeholder=""
+                                            onblur="validate(4)"> </div>
+                                </div>
+
+
+
+                                <h5 class="text-center mb-4">Address Details</h5>
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Address Line 1<span class="text-danger">
+                                                *</span></label> <input type="text" id="fname" name="fname"
+                                            placeholder="Address Line 1" onblur="validate(1)"> </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">City<span class="text-danger">
+                                                *</span></label> <input type="text" id="lname" name="lname"
+                                            placeholder="Enter your City" onblur="validate(2)"> </div>
+                                </div>
+
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">State<span class="text-danger">
+                                                *</span></label> <input type="text" id="fname" name="fname"
+                                            placeholder="State" onblur="validate(1)"> </div>
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Postal Code<span class="text-danger">
+                                                *</span></label> <input type="text" id="lname" name="lname"
+                                            placeholder="Postal Code" onblur="validate(2)"> </div>
+                                </div>
+
+                                <div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Account Number<span class="text-danger">
+                                                *</span></label> <input type="text" id="job" name="job"
+                                            placeholder="Account Number" onblur="validate(5)"> </div>
+                                </div>
+								<div class="row justify-content-between text-left">
+                                    <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                            class="form-control-label px-3">Amount<span class="text-danger">
+                                                *</span></label> <input type="text" id="job" name="job"
+                                            placeholder="Amount" onblur="validate(5)"> </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="row justify-content-end">
+                                    <div class="form-group col-sm-6"> <button type="submit"
+                                            class="btn-block btn-primary">Request a demo</button> </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- content end  -->
+
+
+    <!-- Footer start -->
+    <div class="nav_down">
+        <div>
+            &copy; THE bank
+        </div>
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Hosting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Company Name</h3>
+                            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut
+                                vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit
+                                pulvinar dictum vel in justo.</p>
+                        </div>
+                        <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a
+                                href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
+                                    class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                    class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">Company Name © 2018</p>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </div>
+
+
+
+
+    <!-- Footer end -->
+
+
+
+</body>
+
+</html>
